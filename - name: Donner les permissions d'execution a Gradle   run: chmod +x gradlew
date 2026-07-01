@@ -1,2 +1,0 @@
-- name: Compilation et Generation de l'APK
-  run: gradle assembleDebug
