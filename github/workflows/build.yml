@@ -9,21 +9,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Recuperation du code source
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Configuration de Java (JDK 17)
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu'
           java-version: '17'
-
-      - name: Construire l'APK with Gradle
+          distribution: 'zulu'
+      - name: Build
         run: |
           chmod +x gradlew
           ./gradlew assembleDebug
-
-      - name: Sauvegarder l'APK
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: FabconstructPro-APK
