@@ -19,7 +19,9 @@ jobs:
           java-version: '17'
 
       - name: Construire l'APK avec Gradle
-        run: ./gradlew assembleDebug
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug
 
       - name: Sauvegarder l'APK
         uses: actions/upload-artifact@v4
