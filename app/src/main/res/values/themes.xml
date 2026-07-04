@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Fabconstruct" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/fab_red</item>
+        <item name="android:navigationBarColor">@color/fab_black</item>
+    </style>
+
+</resources>
